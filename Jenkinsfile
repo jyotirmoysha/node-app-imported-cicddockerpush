@@ -10,8 +10,8 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        //app = docker.build("jyotirmoydoc/nodeapp")
-	sh 'sudo docker build -t jyotirmoydoc/nodeapp:2.0.0 .'
+        app = sudo docker.build("jyotirmoydoc/nodeapp")
+	//sh 'sudo docker build -t jyotirmoydoc/nodeapp:2.0.0 .'
     }
 
     stage('Test image') {
